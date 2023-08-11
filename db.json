@@ -1,0 +1,20 @@
+{
+  "userData": [
+    {
+      "name": "Fist User",
+      "birthDate": "1990-08-11",
+      "rg": "125877456",
+      "rgDateOfIssue": "2005-04-23",
+      "issuingAgency": "SSP",
+      "email": "firstuser@email.com",
+      "phoneNumber": "(11)958863525",
+      "street": "Rua 1",
+      "numbersHouse": "100",
+      "city": "São Paulo",
+      "state": "SP",
+      "country": "Brasil",
+      "zipCode": "02506999",
+      "id": 1
+    }
+  ]
+}

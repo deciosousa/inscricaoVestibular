@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscrição de Vestibular - Fictícia Universidade de São Paulo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!------------ HEADER ------------>
+  <header>
+        <h1>Fictícia Universidade de São Paulo</h1>
+        <h3>Inscrição Para Vestibular <span id="year"></span> </h3>
+  </header>
+  <!------------ MAIN ------------>
+  <main>
+    <Form action="" method="post">
+      <fieldset id="personalData">
+        <legend>Dados Pessoais</legend>
+        <p>
+          <label for="nameLabel">nome completo:</label>  
+          <input type="text" id="name" name="name">
+        </p>
+        <p>
+          <label for="birthDateLabel">data de nascimento:</label>  
+          <input type="date" id="birthDate" name="birthDate">
+        </p>
+        <p>
+          <label for="rgLabel">nº da identidade:</label>  
+          <input type="number" id="rg" name="rg">
+        </p>
+        <p>
+          <label for="rgDateOfIssueLabel">data de emissão:</label>  
+          <input type="date" id="rgDateOfIssue" name="rgDateOfIssue">
+        </p>
+        <p>
+          <label for="issuingAgencyLabel">Órgão Emissor:</label>
+          <input type="text" id="issuingAgency" name="issuingAgency">
+        </p>
+        <p>
+          <label for="emailLabel">E-mail:</label>
+          <input type="email" id="email" name="email" placeholder="teste@email.com.br">
+        </p>
+        <p>
+          <label for="phoneNumberLabel">Telefone:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(11)955443322">
+        </p>
+      </fieldset>
+  
+      <fieldset>
+        <legend>Endereço</legend>
+        <p>
+          <label for="streetLabel">endereço:</label>  
+          <input type="text" id="street" name="street" placeholder="Rua Bela Cintra">
+        </p>
+        <p>
+          <label for="numbersHouseLabel">número:</label>  
+          <input type="text" id="numbersHouse" name="numbersHouse">
+        </p> 
+        <p>
+          <label for="cityLabel">cidade:</label>  
+          <input type="text" id="city" name="city">
+        </p>
+        <p>
+          <label for="stateLabel">estado:</label>  
+          <input type="text" id="state" name="state">
+        </p>
+        <p>
+          <label for="countryLabel">país:</label>  
+          <input type="text" id="country" name="country">
+        </p>
+        <p>
+          <label for="zipCodeLabel">CEP:</label>  
+          <input type="text" id="zipCode" name="zipCode">
+        </p>
+      </fieldset>
+      <p>
+        <button type="submit">enviar</button>
+        <button type="reset">limpar formulário</button>
+      </p>
+    </Form>
+
+  </main>
+  <!------------ FOOTER ------------>
+  <footer>
+
+  </footer>
+  
+  <script src="script.js"></script>
+
+</body>
+</html>
