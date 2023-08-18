@@ -1,8 +1,10 @@
-// setting the current year
+/* =========== setting the current year =========  */
+
 const currentDate = new Date();
 const currentYear = currentDate.getFullYear();
 document.getElementById('year').innerText = currentYear;
  
+/* ============= REGISTER ===========  */
 
 /* Selecting form fields */
 const form = document.querySelector("form");
@@ -19,6 +21,9 @@ const fieldCity = document.querySelector("#city");
 const fieldState = document.querySelector("#state");
 const fieldCountry = document.querySelector("#country");
 const fieldZipCode = document.querySelector("#zipCode");
+const modality = document.querySelector('#modality');
+const period = document.querySelector("#period");
+const course = document.querySelector("#course");
 
 /* Form event scheduling */
 form.addEventListener("submit", function(event){
@@ -38,10 +43,21 @@ form.addEventListener("submit", function(event){
         city : fieldCity.value,
         state : fieldState.value,
         country : fieldCountry.value,
-        zipCode : fieldZipCode.value
-    };
-    
+        zipCode : fieldZipCode.value,
+        modality: this.querySelector('input[name="modality"]:checked').value,
+        period: this.querySelector('input[name="period"]:checked').value,
 
+        /* The instruction below allows
+         get the title(textContent) only
+         of the option that was selected (selectOptions[0])
+         within the course list (course)*/
+        course: course.selectedOptions[0].textContent
+    };
+
+
+    /* =========== JSON COMUNICATION =========  */
+
+    
     /* Ajax (communication technique)
     endpoint of userData */
 
@@ -63,4 +79,28 @@ form.addEventListener("submit", function(event){
     
     /* 3) Displaying process end message */
     .then( () => alert("Dados cadastrados com sucesso!") );
+});
+
+/* =========== COURSE SELECTION =========  */
+
+const selectCourses = document.querySelector("#course");
+
+// 1) Access/Connect to API 
+fetch("http://localhost:3000/courses")
+
+// 2) capturing the API response in json format 
+.then( response => response.json() )
+
+// 3) capturing the response data
+.then( courses => {
+
+    // Defining an empty option
+    selectCourses.innerHTML = "<option></option>";
+
+    for( let course of courses ){
+        let option = document.createElement("option");
+        option.value = course.id;
+        option.textContent = course.title;
+        selectCourses.appendChild(option);
+    }
 });

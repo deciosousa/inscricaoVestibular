@@ -1,20 +1,53 @@
 {
   "userData": [
     {
-      "name": "Fist User",
-      "birthDate": "1990-08-11",
-      "rg": "125877456",
-      "rgDateOfIssue": "2005-04-23",
+      "name": "First User",
+      "birthDate": "1990-01-01",
+      "rg": "111111111",
+      "rgDateOfIssue": "2000-02-02",
       "issuingAgency": "SSP",
       "email": "firstuser@email.com",
-      "phoneNumber": "(11)958863525",
-      "street": "Rua 1",
+      "phoneNumber": "(11)955554444",
+      "street": "Rua Principal",
       "numbersHouse": "100",
       "city": "São Paulo",
       "state": "SP",
       "country": "Brasil",
-      "zipCode": "02506999",
+      "zipCode": "01000222",
+      "modality": "inPerson",
+      "period": "evening",
+      "course": "Engenharia",
       "id": 1
+    }
+  ],
+  "courses": [
+    {
+      "id": 1,
+      "title": "Administração"
+    },
+    {
+      "id": 2,
+      "title": "Comércio Exterior"
+    },
+    {
+      "id": 3,
+      "title": "Direito"
+    },
+    {
+      "id": 4,
+      "title": "Engenharia"
+    },
+    {
+      "id": 5,
+      "title": "Medicina"
+    },
+    {
+      "id": 6,
+      "title": "Segurança da Informação"
+    },
+    {
+      "id": 7,
+      "title": "Tecnologia da Informação"
     }
   ]
 }

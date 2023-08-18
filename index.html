@@ -74,8 +74,36 @@
           <input type="text" id="zipCode" name="zipCode">
         </p>
       </fieldset>
+      <fieldset>
+        <legend>Escolha o curso</legend>
+        <p>Selecione a modalidade:</p>
+        <div>
+            <input type="radio" id="inPerson" name="modality" value="inPerson">
+            <label for="inPersonLabel">Presencial</label>
+    
+            <input type="radio" id="distanceLearning" name="modality" value="distanceLearning">
+            <label for="distanceLearningLabel">À Distância</label>
+        </div>
+        <p>Selecione o período:</p>
+        <div>
+            <input type="radio" id="morning" name="period" value="morning">
+            <label for="morningLabel">Manhã</label>
+    
+            <input type="radio" id="afternoon" name="period" value="afternoon">
+            <label for="afternoonLabel">Tarde</label>
+
+            <input type="radio" id="evening" name="period" value="evening">
+            <label for="eveningLabel">Noite</label>
+        </div>
+
+        <p>
+          <label for="courseLabel">Selecione o curso</label>
+          <select name="course" id="course"></select>
+        </p>
+
+      </fieldset>
       <p>
-        <button type="submit">enviar</button>
+        <button type="submit" id="btnSubmit">enviar</button>
         <button type="reset">limpar formulário</button>
       </p>
     </Form>
