@@ -104,3 +104,20 @@ fetch("http://localhost:3000/courses")
         selectCourses.appendChild(option);
     }
 });
+
+/* =========== Show / Hide Period =========  */
+
+function hidePeriod (element) {
+    document.getElementById(element).style.display = 'none';
+}
+
+function showPeriod (element) {
+    document.getElementById(element).style.display = 'block';
+}
+
+
+
+
+
+
+

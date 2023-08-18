@@ -76,16 +76,16 @@
       </fieldset>
       <fieldset>
         <legend>Escolha o curso</legend>
-        <p>Selecione a modalidade:</p>
         <div>
-            <input type="radio" id="inPerson" name="modality" value="inPerson">
+          <p>Selecione a modalidade:</p>
+            <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')">
             <label for="inPersonLabel">Presencial</label>
     
-            <input type="radio" id="distanceLearning" name="modality" value="distanceLearning">
+            <input type="radio" id="distanceLearning" name="modality" value="distanceLearning" onclick="hidePeriod('contentPeriod')">
             <label for="distanceLearningLabel">À Distância</label>
         </div>
-        <p>Selecione o período:</p>
-        <div>
+        <div id="contentPeriod" hidden>
+          <p>Selecione o período:</p>
             <input type="radio" id="morning" name="period" value="morning">
             <label for="morningLabel">Manhã</label>
     
