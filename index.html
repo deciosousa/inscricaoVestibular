@@ -9,96 +9,106 @@
 <body>
   <!------------ HEADER ------------>
   <header>
-        <h1>Fictícia Universidade de São Paulo</h1>
+        <h1>Universidade Fictícia de São Paulo</h1>
         <h3>Inscrição Para Vestibular <span id="year"></span> </h3>
   </header>
   <!------------ MAIN ------------>
   <main>
-    <Form action="" method="post">
+    <Form action="" method="post" >
       <fieldset id="personalData">
         <legend>Dados Pessoais</legend>
         <p>
-          <label for="nameLabel">nome completo:</label>  
-          <input type="text" id="name" name="name">
+          <label for="name">nome completo:</label>  
+          <input type="text" id="name" name="name" required>
         </p>
         <p>
-          <label for="birthDateLabel">data de nascimento:</label>  
-          <input type="date" id="birthDate" name="birthDate">
+          <label for="birthDate">data de nascimento:</label>  
+          <input type="text" id="birthDate" name="birthDate" maxlength="10" required>
         </p>
         <p>
-          <label for="rgLabel">nº da identidade:</label>  
-          <input type="number" id="rg" name="rg">
+          <label for="cpf">nº do CPF:</label>  
+          <input type="text" id="cpf" name="cpf" maxlength="14" autocomplete="off" required>
         </p>
         <p>
-          <label for="rgDateOfIssueLabel">data de emissão:</label>  
-          <input type="date" id="rgDateOfIssue" name="rgDateOfIssue">
+          <label for="rg">nº da identidade:</label>  
+          <input type="text" id="rg" name="rg" autocomplete="off" maxlength="12" required>
         </p>
         <p>
-          <label for="issuingAgencyLabel">Órgão Emissor:</label>
-          <input type="text" id="issuingAgency" name="issuingAgency">
+          <label for="rgDateOfIssue">data de emissão:</label>  
+          <input type="text" id="rgDateOfIssue" name="rgDateOfIssue" maxlength="10" required>
         </p>
         <p>
-          <label for="emailLabel">E-mail:</label>
-          <input type="email" id="email" name="email" placeholder="teste@email.com.br">
+          <label for="issuingAgency">órgão emissor:</label>
+          <input type="text" id="issuingAgency" name="issuingAgency" maxlength="5" required>
         </p>
         <p>
-          <label for="phoneNumberLabel">Telefone:</label>
-          <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="(11)955443322">
+          <label for="email">e-mail:</label>
+          <input type="email" id="email" name="email" placeholder="teste@email.com.br" required>
+        </p>
+        <p>
+          <label for="phoneNumber">telefone:</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="15">
         </p>
       </fieldset>
   
       <fieldset>
         <legend>Endereço</legend>
         <p>
-          <label for="streetLabel">endereço:</label>  
-          <input type="text" id="street" name="street" placeholder="Rua Bela Cintra">
+          <label for="zipCode">CEP:</label>  
+          <input type="text" id="zipCode" name="zipCode" maxlength="8"
+          onblur="searchZipCode(this.value);" required>
         </p>
         <p>
-          <label for="numbersHouseLabel">número:</label>  
-          <input type="text" id="numbersHouse" name="numbersHouse">
+          <label for="street">logradouro:</label>  
+          <input type="text" id="street" name="street" required>
+        </p>
+        <p>
+          <label for="district">bairro:</label>  
+          <input type="text" id="district" name="district" required>
+        </p>
+        <p>
+          <label for="numbersHouse">número:</label>  
+          <input type="text" id="numbersHouse" name="numbersHouse" required>
         </p> 
         <p>
-          <label for="cityLabel">cidade:</label>  
-          <input type="text" id="city" name="city">
+          <label for="adressSupplement">complemento:</label>  
+          <input type="text" id="adressSupplement" name="adressSupplement">
+        </p> 
+        <p>
+          <label for="city">cidade:</label>  
+          <input type="text" id="city" name="city" required>
         </p>
         <p>
-          <label for="stateLabel">estado:</label>  
-          <input type="text" id="state" name="state">
-        </p>
-        <p>
-          <label for="countryLabel">país:</label>  
-          <input type="text" id="country" name="country">
-        </p>
-        <p>
-          <label for="zipCodeLabel">CEP:</label>  
-          <input type="text" id="zipCode" name="zipCode">
+          <label for="state">estado:</label>  
+          <input type="text" id="state" name="state" maxlength="2" required>
         </p>
       </fieldset>
+
       <fieldset>
         <legend>Escolha o curso</legend>
         <div>
           <p>Selecione a modalidade:</p>
-            <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')">
-            <label for="inPersonLabel">Presencial</label>
+            <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')" required>
+            <label for="inPerson">Presencial</label>
     
             <input type="radio" id="distanceLearning" name="modality" value="distanceLearning" onclick="hidePeriod('contentPeriod')">
-            <label for="distanceLearningLabel">À Distância</label>
+            <label for="distanceLearning">À Distância</label>
         </div>
         <div id="contentPeriod" hidden>
           <p>Selecione o período:</p>
-            <input type="radio" id="morning" name="period" value="morning">
-            <label for="morningLabel">Manhã</label>
+            <input type="radio" id="morning" name="period" value="morning" required>
+            <label for="morning">Manhã</label>
     
             <input type="radio" id="afternoon" name="period" value="afternoon">
-            <label for="afternoonLabel">Tarde</label>
+            <label for="afternoon">Tarde</label>
 
-            <input type="radio" id="evening" name="period" value="evening">
-            <label for="eveningLabel">Noite</label>
+            <input type="radio" id="evening" name="period" value="evening" onkeypress="">
+            <label for="evening">Noite</label>
         </div>
 
         <p>
-          <label for="courseLabel">Selecione o curso</label>
-          <select name="course" id="course"></select>
+          <label for="course">Selecione o curso</label>
+          <select name="course" id="course" required></select>
         </p>
 
       </fieldset>
@@ -111,10 +121,13 @@
   </main>
   <!------------ FOOTER ------------>
   <footer>
-
   </footer>
   
   <script src="script.js"></script>
+  <script src="masks.js"></script>
 
 </body>
 </html>
+
+
+  

@@ -10,13 +10,16 @@ document.getElementById('year').innerText = currentYear;
 const form = document.querySelector("form");
 const fieldName = document.querySelector("#name");
 const fieldBirthDate = document.querySelector("#birthDate");
+const fieldCPF = document.querySelector("#cpf");
 const fieldRG = document.querySelector("#rg");
 const fieldRgDateOfIssue = document.querySelector("#rgDateOfIssue");
 const fieldIssuingAgency = document.querySelector("#issuingAgency");
-const email = document.querySelector("#email");
-const phoneNumber = document.querySelector("#phoneNumber");
+const fieldEmail = document.querySelector("#email");
+const fieldPhone = document.querySelector("#phoneNumber");
 const fieldStreet = document.querySelector("#street");
+const fieldDistrict = document.querySelector("#district");
 const fieldNumbersHouse = document.querySelector("#numbersHouse");
+const fieldAdressSupplement = document.querySelector("#adressSupplement");
 const fieldCity = document.querySelector("#city");
 const fieldState = document.querySelector("#state");
 const fieldCountry = document.querySelector("#country");
@@ -33,13 +36,16 @@ form.addEventListener("submit", function(event){
     let userData = {
         name : fieldName.value,
         birthDate : fieldBirthDate.value,
+        cpf : fieldCPF.value,
         rg : fieldRG.value,
         rgDateOfIssue : fieldRgDateOfIssue.value,
         issuingAgency : fieldIssuingAgency.value,
-        email : email.value,
-        phoneNumber : phoneNumber.value,
+        email : fieldEmail.value,
+        phoneNumber : fieldPhone.value,
         street : fieldStreet.value,
+        district : fieldDistrict.value,
         numbersHouse : fieldNumbersHouse.value,
+        adressSupplement : fieldAdressSupplement.value,
         city : fieldCity.value,
         state : fieldState.value,
         country : fieldCountry.value,
@@ -53,7 +59,6 @@ form.addEventListener("submit", function(event){
          within the course list (course)*/
         course: course.selectedOptions[0].textContent
     };
-
 
     /* =========== JSON COMUNICATION =========  */
 
@@ -114,8 +119,6 @@ function hidePeriod (element) {
 function showPeriod (element) {
     document.getElementById(element).style.display = 'block';
 }
-
-
 
 
 
