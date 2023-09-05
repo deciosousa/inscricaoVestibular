@@ -1,16 +1,17 @@
-/* =========== Field Name =========  */
+/* =========== Fields Name && City =========  */
 
 fieldName.addEventListener('input', modifyName);
+fieldCity.addEventListener('input', modifyName);
 
 function modifyName(e) {
     e.target.value = e.target.value
-    .replace(/[^a-zA-Záéíóúàèìòùãõâêîôûäëïöüçñ' ]/, '')
-}
+    .replace(/[^a-zA-Z\u00C0-\u017F'´^ ]/, '')
+    fieldName.value=fieldName.value.toUpperCase()
+  }
 
-/* =========== Field BirthDate && rgDateOfIssue =========  */
+/* =========== Field BirthDate =========  */
 
 fieldBirthDate.addEventListener('input', modifyDate);
-fieldRgDateOfIssue.addEventListener('input', modifyDate);
 
 function modifyDate(e) {
   e.target.value = e.target.value
@@ -31,10 +32,9 @@ function modifyCPF(e) {
     .replace(/(\d{3})(\d)/, '$1-$2')
 }
 
-/* =========== Field RG, RgDateOfIssue, IssuingAgency  =========  */
+/* =========== Field RG   =========  */
 
 fieldRG.addEventListener('input', modifyRG);
-fieldIssuingAgency.addEventListener('input', modifyDateOfIssue);
 
 function modifyRG(e) {
   e.target.value = e.target.value
@@ -44,18 +44,28 @@ function modifyRG(e) {
   .replace(/(\d{3})(\d)/, '$1-$2')
 }
 
+/* =========== Field rgDateOfIssue =========  */
+
+fieldRgDateOfIssue.addEventListener('input', modifyDate);
+
+/* =========== Field IssuingAgency  =========  */
+
+fieldIssuingAgency.addEventListener('input', modifyDateOfIssue);
+
 function modifyDateOfIssue(e) {
   e.target.value = e.target.value
   .replace(/[^a-zA-Z]/, '')
+  fieldIssuingAgency.value=fieldIssuingAgency.value.toUpperCase() 
 }
 
 /* =========== Field Email  =========  */
 
 fieldEmail.addEventListener('input', validateEmail);
 
-let re = /\S+@\S+\.\S+/;
-function validateEmail(email) {
-  return re.test(fieldEmail)
+function validateEmail(e) {
+  e.target.value = e.target.value
+  .replace(/[^1-9a-zA-Z@._ -]/, '');
+  fieldEmail.value=fieldEmail.value.toLowerCase()
 }
 
 /* =========== Field phoneNumber  =========  */
@@ -68,7 +78,6 @@ function modifyPhone(e) {
     .replace(/(\d{2})(\d)/, '($1) $2')
     .replace(/(\d)(\d{4})$/,'$1-$2')
 }
-
 
 /* =========== Field Adress  =========  */
 
@@ -125,12 +134,19 @@ else {
 }
 };
 
-  /* =========== Field Street  =========  */
-  fieldStreet.addEventListener('input', modifyStreet);
+  /* =========== Fields noSpecialCharacters =========  */
+  fieldStreet.addEventListener('input', noSpecialCharacters);
+  fieldDistrict.addEventListener('input', noSpecialCharacters);
+  fieldAdressSupplement.addEventListener('input', noSpecialCharacters);
+  fieldCity.addEventListener('input', noSpecialCharacters);
 
-  function modifyStreet(e) {
+  function noSpecialCharacters(e) {
     e.target.value = e.target.value
-      .replace(/[^1-9a-zA-Záéíóúàèìòùãõâêîôûäëïöüçñ' ]/, '');
+      .replace(/[^1-9a-zA-Z\u00C0-\u017F'´^ ]/, '');
+      fieldStreet.value=fieldStreet.value.toUpperCase()
+      fieldDistrict.value=fieldDistrict.value.toUpperCase()
+      fieldAdressSupplement.value=fieldAdressSupplement.value.toUpperCase()       
+      fieldCity.value=fieldCity.value.toUpperCase()       
   }
   /* =========== Field NumbersHouse  =========  */
   fieldNumbersHouse.addEventListener('input', modifyNumbersHouse);
@@ -140,7 +156,14 @@ else {
       .replace(/[^0-9]/ig, '');
   }
 
+/* =========== Field State  =========  */
 
+fieldState.addEventListener('input', modifyState)
+function modifyState(e) {
+    e.target.value = e.target.value
+    .replace(/[^a-zA-Z]/, '')
+    fieldState.value=fieldState.value.toUpperCase() 
+}
 
 
 
