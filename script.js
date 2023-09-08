@@ -22,7 +22,6 @@ const fieldNumbersHouse = document.querySelector("#numbersHouse");
 const fieldAdressSupplement = document.querySelector("#adressSupplement");
 const fieldCity = document.querySelector("#city");
 const fieldState = document.querySelector("#state");
-const fieldCountry = document.querySelector("#country");
 const fieldZipCode = document.querySelector("#zipCode");
 const modality = document.querySelector('#modality');
 const period = document.querySelector("#period");
@@ -48,10 +47,9 @@ form.addEventListener("submit", function(event){
         adressSupplement : fieldAdressSupplement.value,
         city : fieldCity.value,
         state : fieldState.value,
-        country : fieldCountry.value,
         zipCode : fieldZipCode.value,
         modality: this.querySelector('input[name="modality"]:checked').value,
-        period: this.querySelector('input[name="period"]:checked').value,
+        period: this.querySelector('input[name="period"]:checked')?.value || '', // using optional chaining operator to allow empty period property
 
         /* The instruction below allows
          get the title(textContent) only
@@ -119,8 +117,4 @@ function hidePeriod (element) {
 function showPeriod (element) {
     document.getElementById(element).style.display = 'block';
 }
-
-
-
-
 

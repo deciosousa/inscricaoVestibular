@@ -64,7 +64,7 @@ fieldEmail.addEventListener('input', validateEmail);
 
 function validateEmail(e) {
   e.target.value = e.target.value
-  .replace(/[^1-9a-zA-Z@._ -]/, '');
+  .replace(/[^0-9a-zA-Z@._ -]/, '');
   fieldEmail.value=fieldEmail.value.toLowerCase()
 }
 
@@ -142,7 +142,7 @@ else {
 
   function noSpecialCharacters(e) {
     e.target.value = e.target.value
-      .replace(/[^1-9a-zA-Z\u00C0-\u017F'´^ ]/, '');
+      .replace(/[^0-9a-zA-Z\u00C0-\u017F'´^ ]/, '');
       fieldStreet.value=fieldStreet.value.toUpperCase()
       fieldDistrict.value=fieldDistrict.value.toUpperCase()
       fieldAdressSupplement.value=fieldAdressSupplement.value.toUpperCase()       
@@ -164,7 +164,6 @@ function modifyState(e) {
     .replace(/[^a-zA-Z]/, '')
     fieldState.value=fieldState.value.toUpperCase() 
 }
-
 
 
 

@@ -88,7 +88,7 @@
         <legend>Escolha o curso</legend>
         <div>
           <p>Selecione a modalidade:</p>
-            <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')">
+            <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')" required>
             <label for="inPerson">Presencial</label>
     
             <input type="radio" id="distanceLearning" name="modality" value="distanceLearning" onclick="hidePeriod('contentPeriod')">
@@ -96,13 +96,13 @@
         </div>
         <div id="contentPeriod" hidden>
           <p>Selecione o período:</p>
-            <input type="radio" id="morning" name="period" value="morning" required>
+            <input type="radio" id="morning" name="period" value="morning">
             <label for="morning">Manhã</label>
     
             <input type="radio" id="afternoon" name="period" value="afternoon">
             <label for="afternoon">Tarde</label>
 
-            <input type="radio" id="evening" name="period" value="evening" onkeypress="">
+            <input type="radio" id="evening" name="period" value="evening">
             <label for="evening">Noite</label>
         </div>
 
