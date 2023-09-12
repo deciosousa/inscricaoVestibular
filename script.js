@@ -112,9 +112,12 @@ fetch("http://localhost:3000/courses")
 
 function hidePeriod (element) {
     document.getElementById(element).style.display = 'none';
+    const noRequired = document.getElementsByName("period");
+    for(let i = 0; i < noRequired.length; i++) {
+        noRequired[i].removeAttribute("required") 
+    } 
 }
 
 function showPeriod (element) {
     document.getElementById(element).style.display = 'block';
 }
-

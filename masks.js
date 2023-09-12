@@ -164,6 +164,3 @@ function modifyState(e) {
     .replace(/[^a-zA-Z]/, '')
     fieldState.value=fieldState.value.toUpperCase() 
 }
-
-
-
