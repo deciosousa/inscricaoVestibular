@@ -1,12 +1,46 @@
-/* #nameError {
+/* sheet style (tab) */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style of buttons inside the tab */
+.tab button {
+  background-color: inherit; /* parent element color */
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color on dropdown button */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create active/current tab style - tabalinks class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the content of each tab*/
+.tabContent {
   display: none;
-  font-size: 0.8em;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
 }
 
-#nameError.visible {
-  display: block;
+/* Closing Button Style "x" */
+.topRight {
+  float: right;
+  cursor: pointer;
+  font-size: 28px;
 }
 
-input.invalid {
-  border-color: red;
-} */
+/* Change color closing button on hover */
+.topRight:hover {color: red;}

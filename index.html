@@ -10,113 +10,149 @@
   <!------------ HEADER ------------>
   <header>
         <h1>Universidade Fictícia de São Paulo</h1>
-        <h3>Inscrição Para Vestibular <span id="year"></span> </h3>
   </header>
+
   <!------------ MAIN ------------>
   <main>
-    <Form action="" method="post" >
-      <fieldset id="personalData">
-        <legend>Dados Pessoais</legend>
-        <p>
-          <label for="name">nome completo:</label>  
-          <input type="text" id="name" name="name" required>
-        </p>
-        <p>
-          <label for="birthDate">data de nascimento:</label>  
-          <input type="text" id="birthDate" name="birthDate" maxlength="10" required>
-        </p>
-        <p>
-          <label for="cpf">nº do CPF:</label>  
-          <input type="text" id="cpf" name="cpf" maxlength="14" autocomplete="off" required>
-        </p>
-        <p>
-          <label for="rg">nº da identidade:</label>  
-          <input type="text" id="rg" name="rg" autocomplete="off" maxlength="12" required>
-        </p>
-        <p>
-          <label for="rgDateOfIssue">data de emissão:</label>  
-          <input type="text" id="rgDateOfIssue" name="rgDateOfIssue" maxlength="10" required>
-        </p>
-        <p>
-          <label for="issuingAgency">órgão emissor:</label>
-          <input type="text" id="issuingAgency" name="issuingAgency" maxlength="5" required>
-        </p>
-        <p>
-          <label for="email">e-mail:</label>
-          <input type="email" id="email" name="email" placeholder="teste@email.com.br" required>
-        </p>
-        <p>
-          <label for="phoneNumber">telefone:</label>
-          <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="15">
-        </p>
-      </fieldset>
-  
-      <fieldset>
-        <legend>Endereço</legend>
-        <p>
-          <label for="zipCode">CEP:</label>  
-          <input type="text" id="zipCode" name="zipCode" maxlength="8"
-          onblur="searchZipCode(this.value);" required>
-        </p>
-        <p>
-          <label for="street">logradouro:</label>  
-          <input type="text" id="street" name="street" required>
-        </p>
-        <p>
-          <label for="district">bairro:</label>  
-          <input type="text" id="district" name="district" required>
-        </p>
-        <p>
-          <label for="numbersHouse">número:</label>  
-          <input type="text" id="numbersHouse" name="numbersHouse" required>
-        </p> 
-        <p>
-          <label for="adressSupplement">complemento:</label>  
-          <input type="text" id="adressSupplement" name="adressSupplement">
-        </p> 
-        <p>
-          <label for="city">cidade:</label>  
-          <input type="text" id="city" name="city" required>
-        </p>
-        <p>
-          <label for="state">estado:</label>  
-          <input type="text" id="state" name="state" maxlength="2" required>
-        </p>
-      </fieldset>
+    <!-- Menu tabLinks -->
+    <div class="tab">
+      <button class="tabLinks" onclick="openTab(event, 'applicationForm')">Inscrição de Vestibular</button>
+      <button class="tabLinks" onclick="openTab(event, 'registrationTable')">Quadro de Inscritos</button>
+    </div>
 
-      <fieldset>
-        <legend>Escolha o curso</legend>
-        <div>
-          <p>Selecione a modalidade:</p>
-            <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')" required>
-            <label for="inPerson">Presencial</label>
-    
-            <input type="radio" id="distanceLearning" name="modality" value="distanceLearning" onclick="hidePeriod('contentPeriod')">
-            <label for="distanceLearning">À Distância</label>
-        </div>
-        <div id="contentPeriod" hidden>
-          <p>Selecione o período:</p>
-            <input type="radio" id="morning" name="period" value="morning" required>
-            <label for="morning">Manhã</label>
-    
-            <input type="radio" id="afternoon" name="period" value="afternoon">
-            <label for="afternoon">Tarde</label>
+<!-- Tab applicationForm -->
+    <div id="applicationForm" class="tabContent">
+      <span onclick="this.parentElement.style.display='none'" class="topRight">×</span>
+      
+      <h3>Inscrição Para Vestibular <span id="year"></span> </h3>
+      
+      <Form action="" method="post" >
+        
+        <fieldset id="personalData">
+          <legend>Dados Pessoais</legend>
+          <p>
+            <label for="name">nome completo:</label>  
+            <input type="text" id="name" name="name" required>
+          </p>
+          <p>
+            <label for="birthDate">data de nascimento:</label>  
+            <input type="text" id="birthDate" name="birthDate" maxlength="10" required>
+          </p>
+          <p>
+            <label for="cpf">nº do CPF:</label>  
+            <input type="text" id="cpf" name="cpf" maxlength="14" autocomplete="off" required>
+          </p>
+          <p>
+            <label for="rg">nº da identidade:</label>  
+            <input type="text" id="rg" name="rg" autocomplete="off" maxlength="12" required>
+          </p>
+          <p>
+            <label for="rgDateOfIssue">data de emissão:</label>  
+            <input type="text" id="rgDateOfIssue" name="rgDateOfIssue" maxlength="10" required>
+          </p>
+          <p>
+            <label for="issuingAgency">órgão emissor:</label>
+            <input type="text" id="issuingAgency" name="issuingAgency" maxlength="5" required>
+          </p>
+          <p>
+            <label for="email">e-mail:</label>
+            <input type="email" id="email" name="email" placeholder="teste@email.com.br" required>
+          </p>
+          <p>
+            <label for="phoneNumber">telefone:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="15">
+          </p>
+        </fieldset>
 
-            <input type="radio" id="evening" name="period" value="evening">
-            <label for="evening">Noite</label>
-        </div>
+        <fieldset>
+          <legend>Endereço</legend>
+          <p>
+            <label for="zipCode">CEP:</label>  
+            <input type="text" id="zipCode" name="zipCode" maxlength="8"
+            onblur="searchZipCode(this.value);" required>
+          </p>
+          <p>
+            <label for="street">logradouro:</label>  
+            <input type="text" id="street" name="street" required>
+          </p>
+          <p>
+            <label for="district">bairro:</label>  
+            <input type="text" id="district" name="district" required>
+          </p>
+          <p>
+            <label for="numbersHouse">número:</label>  
+            <input type="text" id="numbersHouse" name="numbersHouse" required>
+          </p> 
+          <p>
+            <label for="adressSupplement">complemento:</label>  
+            <input type="text" id="adressSupplement" name="adressSupplement">
+          </p> 
+          <p>
+            <label for="city">cidade:</label>  
+            <input type="text" id="city" name="city" required>
+          </p>
+          <p>
+            <label for="state">estado:</label>  
+            <input type="text" id="state" name="state" maxlength="2" required>
+          </p>
+        </fieldset>
 
+        <fieldset>
+          <legend>Escolha o curso</legend>
+          <div>
+            <p>Selecione a modalidade:</p>
+              <input type="radio" id="inPerson" name="modality" value="inPerson" onclick="showPeriod('contentPeriod')" required>
+              <label for="inPerson">Presencial</label>
+      
+              <input type="radio" id="distanceLearning" name="modality" value="distanceLearning" onclick="hidePeriod('contentPeriod')">
+              <label for="distanceLearning">À Distância</label>
+          </div>
+          <div id="contentPeriod" hidden>
+            <p>Selecione o período:</p>
+              <input type="radio" id="morning" name="period" value="morning" required>
+              <label for="morning">Manhã</label>
+      
+              <input type="radio" id="afternoon" name="period" value="afternoon">
+              <label for="afternoon">Tarde</label>
+
+              <input type="radio" id="evening" name="period" value="evening">
+              <label for="evening">Noite</label>
+          </div>
+
+          <p>
+            <label for="course">Selecione o curso</label>
+            <select name="course" id="course" required></select>
+          </p>
+
+        </fieldset>
         <p>
-          <label for="course">Selecione o curso</label>
-          <select name="course" id="course" required></select>
+          <button type="submit" id="btnSubmit">enviar</button>
+          <!-- <button type="submit" id="btnSubmit" onclick='return confirmation();'>enviar</button> -->
+          <button type="reset">limpar formulário</button>
         </p>
+      </Form>
+    </div>
 
-      </fieldset>
-      <p>
-        <button type="submit" id="btnSubmit">enviar</button>
-        <button type="reset">limpar formulário</button>
-      </p>
-    </Form>
+    <!-- Tab resgistrationTable -->
+    <div id="registrationTable" class="tabContent">
+      <span onclick="this.parentElement.style.display='none'" class="topRight">×</span>
+      <div>
+        <h3>Quadro de Inscritos</h3>
+        <table id="subscriberTable">
+          <tr>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>BIRTHDATE</th>
+            <th>CPF</th>
+            <th>EMAIL</th>
+            <th>PHONE NUMBER</th>
+            <th>MODALITY</th>
+            <th>PERIOD</th>
+            <th>COURSE</th>
+          </tr>
+        </table>
+      </div>
+    </div>
 
   </main>
   <!------------ FOOTER ------------>
@@ -125,6 +161,7 @@
   
   <script src="script.js"></script>
   <script src="masks.js"></script>
+  <script src="registrationTable.js"></script>
 
 </body>
 </html>
