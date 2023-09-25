@@ -1,14 +1,36 @@
+
+* {
+  margin: 0;  
+  padding: 0; 
+  box-sizing: border-box
+  }
+
+body { 
+  margin: 15px;
+  background: white; 
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px; 
+}
+
+header h1 {
+  padding: 25px;
+  text-align: center;
+  font-size: 23px;
+}
+
+header span {
+  padding-right: 25px;
+}
+
 /* sheet style (tab) */
 .tab {
   overflow: hidden;
-  border: 1px solid #ccc;
-  background-color: #f1f1f1;
 }
 
 /* Style of buttons inside the tab */
 .tab button {
   background-color: inherit; /* parent element color */
-  float: left;
+  float: right;
   border: none;
   outline: none;
   cursor: pointer;
@@ -25,22 +47,330 @@
 /* Create active/current tab style - tabalinks class */
 .tab button.active {
   background-color: #ccc;
-}
-
-/* Style the content of each tab*/
-.tabContent {
-  display: none;
-  padding: 6px 12px;
-  border: 1px solid #ccc;
-  border-top: none;
+  font-weight: bold;
 }
 
 /* Closing Button Style "x" */
 .topRight {
   float: right;
   cursor: pointer;
-  font-size: 28px;
+  font-size: 25px;
 }
 
 /* Change color closing button on hover */
 .topRight:hover {color: red;}
+
+/* Style the content of each tab*/
+.tabContent {
+  display: none;
+  padding: 15px 20px;
+  line-height: 20px;
+}
+
+.tabContent h3 {
+  text-align: center;
+  padding: 10px 0px;
+  margin-bottom: 10px;
+}
+
+.tabContent form {
+  width: 80vw;
+  padding: 10px;
+	margin: auto;
+}
+
+.tabContent fieldset  {
+  border-radius: 5px;
+  border: 2px solid #7c7c7c;
+  margin-bottom: 20px;
+}
+
+.tabContent legend {
+  padding: 10px;
+  font-weight: bold;
+}
+
+.tabContent input {
+  min-height: 23px;
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  transition: all 0.30s ease-in-out;
+}
+
+.tabContent input:hover {
+  background-color: #eaecec;
+}
+
+.tabContent input:focus {
+  outline-color: #f5ba1a;
+  background-color: #fff;
+}
+
+.personalData{
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.name {
+  width: 40%;
+  >label{
+    display: block;
+    margin: 10px 0 5px 10px;
+  }
+  >input{
+    min-width: 80%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.birthDate {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 10px 0 5px 10px;
+  }
+  >input{
+    min-width: 50%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.cpf {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 10px 0 5px 10px;
+  }
+  >input{
+    min-width: 60%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.rg {
+  width: 40%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 50%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.rgDateOfIssue {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 50%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.issuingAgency {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 30%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.email {
+  width: 40%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 70%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.phoneNumber {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 35%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.adress {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.zipCode {
+  width: 100%;
+  >label{
+    display: block;
+    margin: 10px 0 5px 10px;
+  }
+  >input{
+    min-width: 15%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.street {
+  width: 40%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 90%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.district {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 80%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.numbersHouse {
+  width: 10%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+   max-width: 70%;
+    margin:0 0px 20px 10px;
+  }
+}
+
+.adressSupplement {
+  width: 40%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 60%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.city {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    min-width: 80%;
+    margin:0 0 20px 10px;
+  }
+}
+
+.state {
+  width: 30%;
+  >label{
+    display: block;
+    margin: 0 0 5px 10px;
+  }
+  >input{
+    max-width: 20%;
+    margin:0 5px 20px 10px;
+  }
+}
+
+.selectCourse{
+  width: 40%;
+  display: flex;
+  flex-flow: row wrap;
+  float: left;
+  >p {
+    width: 100%;
+    margin: 10px 0 5px 10px;
+  }
+  >input {
+    margin: 10px 0 0 10px;
+  }
+  >label {
+    margin: 12px 10px 0 8px;
+  }
+}
+
+.period input {
+  margin: 0 5px 15px 0;
+  float:left;
+  }
+
+.period label {  
+  float:left;
+  margin:0 20px 15px 0;
+
+}
+
+.period label:first-child {
+  margin: 12px 0 15px 0;
+  width: 100%;
+}
+
+.course {
+  width: 60%;
+  float: right;
+}
+
+p button {
+  font-weight: 600;
+  padding: 5px 10px;
+  margin: 10px 15px 0px 0px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  background-color: #e7e7e7;
+}
+
+p button:nth-child(1) {
+  color: #fff;
+  background-color: #3a57af;
+}
+
+p button:hover {
+  color: #070707;
+  background-color: #c2bfbf;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
