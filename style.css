@@ -5,7 +5,6 @@
   }
 
 body { 
-  margin: 15px;
   background: white; 
   font-family: Arial, Helvetica, sans-serif;
   font-size: 14px; 
@@ -14,6 +13,7 @@ body {
 #container{
   position: relative;
   min-height: 100vh;
+  margin: 0 auto;
 }
 
 #content-wrap {
@@ -89,7 +89,6 @@ header span {
 
 .tabContent form {
   width: 80vw;
-  padding: 10px;
 	margin: auto;
 }
 
@@ -411,17 +410,64 @@ footer{
   text-align: center;      
 }
 
-/* ---------- RESPONSIVE TABLE ----------- */
 
-@media (max-width: 767px) { 
+/* ---------- RESPONSIVE STYLE ----------- */
+
+@media all and (max-width: 767px) { 
+
+  header h1 {
+    font-size: 15px;
+  }
   
-  /* Responsive Table */
+  .tab {
+    display: flex;
+    flex-direction: column;
+    width: 50vw;
+    margin: auto;
+  }
+
+  .tab button {
+    font-size: 13px;
+  }
+
+  .tabContent h3 {
+    font-size: 13px;
+  }
+
+  /* ---------- RESPONSIVE FORM ----------- */
+  
+  form {
+    width: auto;
+    min-width: 240px;
+  }
+
+  .personalData, .adress {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .personalData p, .adress p {
+    display: flex;
+    flex-direction: column;
+    width: 85%;
+  }
+
+  .selectCourse{
+    min-width: 240px;
+  }
+
+  .course {
+    float: left;
+    margin: 10px 0 10px 10px;
+  }
+
+
+  /* ---------- RESPONSIVE TABLE ----------- */
   .table-responsive {
     display: block;
     position: relative;
     width: 100%;
-    border: 1px solid gray
-    
+    border: 1px solid #8b8b8b
   }
 
   .table-responsive thead,
@@ -434,6 +480,11 @@ footer{
   .table-responsive td,
   .table-responsive th {
     height: 35px;
+    font-size: 12px;
+  }
+
+  .table-responsive td {
+    border: 1px solid #8b8b8b;
   }
 
   .table-responsive thead {
@@ -451,7 +502,11 @@ footer{
   .table-responsive tbody tr {
     display: inline-block;
   }
+  footer {
+    font-size: 13px;
+  }
 }
+
 
 
 
