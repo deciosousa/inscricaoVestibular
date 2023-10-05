@@ -1,11 +1,16 @@
 /* =========== Fields Name && City =========  */
 
+//  using an event handler (addEventListener) to configure functions that create masks for form input fields 
 fieldName.addEventListener('input', modifyName);
 fieldCity.addEventListener('input', modifyName);
 
+// specifying the function to be performed when the event is detected 
 function modifyName(e) {
+    //e.target adds the html element to the event handler. In this case, specifically the input fields "fieldName" and "fieldCity"
     e.target.value = e.target.value
+    // using the replace() method and a regex to control field input values
     .replace(/[^a-zA-Z\u00C0-\u017F'´^ ]/, '')
+    // using the toUpperCase() method to format field input values
     fieldName.value=fieldName.value.toUpperCase()
   }
 
