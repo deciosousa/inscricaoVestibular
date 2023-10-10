@@ -14,8 +14,12 @@ The Node.JS json-server component is used to simulate the consumption of a stand
 In order to consolidate learning and explore the resources of the programming languages used in the front-end, no frameworks or libraries are used in this application.<p> 
 <h3> :hammer: Project Features</h3>
 
-- `Feature 1`: Feature Description 1
-- `Feature 2`: Feature Description 2
+- `Tabs`: Use of the tabbed menu to simulate the division of application resources into components and speed up navigation.
+- `Form`: Display of a form for user input.
+- `Masks`: Using input masks in JavaScript to validate and format form fields.
+- `DOM`: DOM manipulation to dynamically display content.
+- `Table`: Using a table to display all data that has been persisted by the user.
+- `Responsiveness`: Use of media queries to develop application responsiveness.
 
 <h3>:dart: Next Steps</h3>
 
