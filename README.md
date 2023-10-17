@@ -32,7 +32,7 @@ In order to consolidate learning and explore the resources of the programming la
 - implement other HTTP layer endpoints to allow the user to change and delete a record.
 <h3>:open_file_folder: Project Access</h3>
 
-You can [access project source code](https://github.com/deciosousa/inscricaoVestibular.git) or [visit its web page]().
+You can [access project source code](https://github.com/deciosousa/inscricaoVestibular.git).
 
 <h3>:gear: Open and Run the Project</h3>
 
@@ -42,7 +42,7 @@ You can [access project source code](https://github.com/deciosousa/inscricaoVest
   `npm install -g json-server`
 - Navigate to the project folder and run the command:
   `json-server --watch db.json`
-- Finally, open the index.html file in your preferred browser.
+- Finally, open the index.html file in your preferred browser or [click here]() to visit the web page.
 
 <h3>:heavy_check_mark: Technologies Used</h3>
 
